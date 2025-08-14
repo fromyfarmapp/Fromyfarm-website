@@ -75,14 +75,14 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="flex flex-col space-y-2 pt-4 border-t border-white/20">
+            {/* <div className="flex flex-col space-y-2 pt-4 border-t border-white/20">
               <Button variant="ghost" size="sm">
                 Login
               </Button>
               <Button variant="glass-primary" size="sm">
                 Get App
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       )}
