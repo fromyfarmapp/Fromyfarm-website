@@ -7,45 +7,17 @@ import {
   Globe,
   TrendingUp,
   CheckCircle,
-  Link,
-  Shield,
-  Zap,
-  BarChart3,
-  MapPin,
   Tractor,
   ShoppingCart,
   Package,
-  Star,
-  Clock,
   DollarSign,
-  Phone,
-  MessageCircle,
-  Mail,
-  Twitter,
-  ExternalLink,
 } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
-export function Example() {
-  return (
-    <Carousel
-      plugins={[
-        Autoplay({
-          delay: 2000,
-        }),
-      ]}
-    >
-      // ...
-    </Carousel>
-  );
-}
 
 export default function Home() {
   const features = [
