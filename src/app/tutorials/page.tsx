@@ -1,7 +1,8 @@
 "use client"
 
+import DownloadButton from "@/components/DownloadButton"
 import { Button } from "@/components/ui/button"
-import { Play, User, ShoppingCart, Package, Users, Download, BookOpen } from "lucide-react"
+import { Play, User, ShoppingCart, Package, Users,Download,  BookOpen } from "lucide-react"
 import { useState } from "react"
 
 export default function TutorialsPage() {
@@ -68,19 +69,21 @@ export default function TutorialsPage() {
       </section>
 
       {/* User Type Selection */}
-      <section className="container mx-auto px-6 py-10">
+       <section className="container mx-auto px-6">
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {userTypes.map((type) => (
-            <Button
-              key={type.id}
-              variant={selectedUserType === type.id ? "default" : "glass"}
-              size="lg"
-              onClick={() => setSelectedUserType(type.id)}
-              className="flex items-center space-x-2 px-6 py-3 transition-all duration-300"
-            >
-              <type.icon className="w-5 h-5" />
-              <span>{type.label}</span>
-            </Button>
+        <Button
+          key={type.id}
+          variant={selectedUserType === type.id ? "default" : "glass"}
+          size="lg"
+          onClick={() => setSelectedUserType(type.id)}
+          className={`flex items-center space-x-2 px-6 py-3 transition-all duration-300
+            ${selectedUserType === type.id ? "bg-gradient-to-br from-green-500 to-green-600 text-white" : ""}
+          `}
+        >
+          <type.icon className="w-5 h-5" />
+          <span>{type.label}</span>
+        </Button>
           ))}
         </div>
       </section>
@@ -146,9 +149,9 @@ export default function TutorialsPage() {
             <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <Download className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Farmer Agent Guide</h3>
+            <h3 className="text-xl font-semibold mb-3">Fromyfarm Guide</h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              Comprehensive PDF guide for becoming a successful farmer agent
+              Comprehensive PDF guide for Fromyfarm app
             </p>
             <Button variant="glass" size="sm">
               Download PDF
@@ -157,7 +160,7 @@ export default function TutorialsPage() {
 
           <div className="glass-card text-center group animate-slide-in-left" style={{ animationDelay: "0.1s" }}>
             <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-              <BookOpen className="w-8 h-8 text-white" />
+              <BookOpen className="w-8 h-8 text-green-600" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Quick Start Guide</h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
@@ -186,7 +189,7 @@ export default function TutorialsPage() {
       {/* CTA Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="glass-card text-center max-w-4xl mx-auto animate-fade-in">
-          <div className="space-y-8">
+          <div className="space-y-3">
             <h2 className="text-3xl md:text-4xl font-bold">
               Ready to Get Started?
             </h2>
@@ -194,13 +197,8 @@ export default function TutorialsPage() {
               Download Fromyfarm and start your journey to agricultural success. 
               Our tutorials will guide you every step of the way.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" variant="default" className="text-lg px-8 py-4">
-                Download App
-              </Button>
-              <Button size="lg" variant="glass" className="text-lg px-8 py-4">
-                Browse All Tutorials
-              </Button>
+            <div className="flex flex-col sm:flex-row  justify-center items-center">
+              <DownloadButton/>
             </div>
           </div>
         </div>
