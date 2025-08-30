@@ -310,7 +310,7 @@ export default function Home() {
                   size="lg"
                   className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 text-lg shadow-lg transform hover:scale-105 transition-all duration-200"
                 >
-                  Start Trading Now
+                  Start Now
                 </Button>
               </div>
             </div>
