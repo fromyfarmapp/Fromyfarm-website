@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Mail, MapPin, Phone, MessageCircle, Twitter, ExternalLink } from "lucide-react"
+import { Mail, MapPin, Phone, ExternalLink } from "lucide-react"
+import { FaWhatsapp, FaXTwitter } from "react-icons/fa6"
 
 const Footer = () => {
   const quickLinks = [
@@ -42,7 +43,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>Kisaasi, Uganda</span>
+                <span>Plot 4847 Bukoto Kisaasi Road, Kisaasi, Dungu Zonea</span>
               </div>
             </div>
 
@@ -143,7 +144,7 @@ const Footer = () => {
                   className="group flex items-center justify-center w-10 h-10 bg-green-100 hover:bg-green-200 rounded-full transition-all duration-300 transform hover:scale-110"
                   title="WhatsApp"
                 >
-                  <MessageCircle className="w-5 h-5 text-green-600 group-hover:text-green-700" />
+                  <FaWhatsapp className="w-5 h-5 text-green-600 group-hover:text-green-700" />
                 </a>
 
                 {/* Email */}
@@ -163,12 +164,16 @@ const Footer = () => {
                   className="group flex items-center justify-center w-10 h-10 bg-sky-100 hover:bg-sky-200 rounded-full transition-all duration-300 transform hover:scale-110"
                   title="Twitter"
                 >
-                  <Twitter className="w-5 h-5 text-sky-600 group-hover:text-sky-700" />
+                  <FaXTwitter className="w-5 h-5 text-sky-600 group-hover:text-sky-700" />
                 </a>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4" />
+                <div className="flex flex-row space-y-3">
+                <span>+256 743 101 292</span>
                 <span>+256 772 123 456</span>
+                </div>
+
               </div>
             </div>
         </div>
