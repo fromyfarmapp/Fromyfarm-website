@@ -22,7 +22,7 @@ export default function AboutPage() {
   const team = [
     {
       name: "Stephen Odonga",
-      role: "Chief Executive Officer",
+      role: "Co-Founder/Chief Executive Officer",
       socialMedia: [
         {
           icon: Linkedin,
@@ -87,6 +87,23 @@ export default function AboutPage() {
         },
       ],
       image: "/images/team/maria.jpg",
+    },
+      {
+      name: "MArvin Arthur",
+      role: "Co-founder / Software Developer",
+      socialMedia: [
+        {
+          icon: Github,
+          platform: "GitHub",
+          url: "https://github.com/marvinarthur",
+        },
+        {
+          icon: Linkedin,
+          platform: "LinkedIn",
+          url: "#",
+        },
+      ],
+      image: "/images/team/#.jpg",
     },
   ];
 
