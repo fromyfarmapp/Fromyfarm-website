@@ -24,17 +24,17 @@ const Header = () => {
     { name: "Tutorials", href: "/tutorials" },
     { 
       name: "Marketplace", 
-      href: "/marketplace",
+      href: "#",
       subPages: [
-        { name: "Market Growth Awareness", href: "/marketplace/growth-awareness" },
-        { name: "Conferences", href: "/marketplace/conferences" },
+        // { name: "Market Growth Awareness", href: "/marketplace/growth-awareness" },
+        { name: "Conferences", href: "/marketplace/conference" },
         { name: "Exhibitions", href: "/marketplace/exhibitions" },
-        { name: "Market Campaign", href: "/marketplace/campaign" },
+        // { name: "Market Campaign", href: "/marketplace/campaign" },
       ]
     },
     { name: "Contact", href: "/contact" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Donate", href: "/donate" },
+    { name: "FAQs", href: "/faqs" },
+    // { name: "Donate", href: "/donate" },
   ]
 
   return (
