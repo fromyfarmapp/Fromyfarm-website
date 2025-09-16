@@ -5,22 +5,22 @@ import { FaWhatsapp, FaXTwitter } from "react-icons/fa6"
 const Footer = () => {
   const quickLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/abot" },
-    { name: "Tutorials", href: "/tutorial" },
-    { name: "Marketplace", href: "/marketplac" },
+    { name: "About", href: "/about" },
+    { name: "Tutorials", href: "/tutorials" },
+    // { name: "Marketplace", href: "/marketplac" },
   ]
 
   const support = [
     { name: "Contact", href: "/contact" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Donate", href: "/donate" },
+    { name: "FAQ", href: "/faqs" },
+    // { name: "Donate", href: "/donate" },
   ]
 
   const userTypes = [
-    { name: "For Farmers", href: "/tutorial" },
-    { name: "For Buyers", href: "/tutorial" },
-    { name: "For Suppliers", href: "/tutorial" },
-    { name: "For Agents", href: "/tutorial" },
+    { name: "For Farmers", href: "/tutorials" },
+    { name: "For Buyers", href: "/tutorials" },
+    { name: "For Suppliers", href: "/tutorials" },
+    { name: "For Agents", href: "/tutorials" },
   ]
 
   return (
