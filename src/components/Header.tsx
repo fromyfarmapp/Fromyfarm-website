@@ -27,8 +27,8 @@ const Header = () => {
       href: "#",
       subPages: [
         // { name: "Market Growth Awareness", href: "/marketplace/growth-awareness" },
-        { name: "Conferences", href: "/#" },
-        { name: "Exhibitions", href: "/#" },
+        { name: "Conferences", href: "/conference" },
+        { name: "Exhibitions", href: "/exhibitions" },
         // { name: "Market Campaign", href: "/marketplace/campaign" },
       ]
     },
