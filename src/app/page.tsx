@@ -11,6 +11,11 @@ import {
   ShoppingCart,
   Package,
   DollarSign,
+  UserCheck,
+  Store,
+  Truck,
+  HandHeart,
+  Building2,
 } from "lucide-react";
 import {
   Carousel,
@@ -157,6 +162,99 @@ export default function Home() {
     {
       src: "/images/phones/iphonefmf.png",
       alt: "fromyfarm phone 2",
+    },
+  ];
+
+  const identityOptions = [
+    {
+      title: "FARMER",
+      icon: Tractor,
+      description: "Uploads and sells produce in an open market",
+      benefits: [
+        "Trade produce in an open market",
+        "Receive competitive bids from buyers",
+        "Decide which buyer's bid to accept",
+        "Access to wider market opportunities"
+      ],
+      color: "emerald",
+      gradient: "from-emerald-500 to-green-600",
+      lightGradient: "from-emerald-50 to-green-50",
+      border: "border-emerald-200",
+      shadow: "shadow-emerald-100",
+      glow: "group-hover:shadow-emerald-300/50",
+      text: "text-emerald-600",
+    },
+    {
+      title: "BUYER",
+      icon: ShoppingCart,
+      description: "Access farm produce directly from farmers",
+      benefits: [
+        "Bid on farmer's produce",
+        "Pay for farmer contact details",
+        "Annual registration fee of $3.09",
+        "Direct access to agricultural suppliers"
+      ],
+      color: "blue",
+      gradient: "from-blue-500 to-indigo-600",
+      lightGradient: "from-blue-50 to-indigo-50",
+      border: "border-blue-200",
+      shadow: "shadow-blue-100",
+      glow: "group-hover:shadow-blue-300/50",
+      text: "text-blue-600",
+    },
+    {
+      title: "SUPPLIER",
+      icon: Package,
+      description: "Advertise supplies to agricultural community",
+      benefits: [
+        "Advertise supplies (e.g., gumboots)",
+        "30-day advertising per supply type",
+        "Annual registration fee of $3.09",
+        "Connect with farmers and agri-businesses"
+      ],
+      color: "purple",
+      gradient: "from-purple-500 to-violet-600",
+      lightGradient: "from-purple-50 to-violet-50",
+      border: "border-purple-200",
+      shadow: "shadow-purple-100",
+      glow: "group-hover:shadow-purple-300/50",
+      text: "text-purple-600",
+    },
+    {
+      title: "FARMER AGENT",
+      icon: UserCheck,
+      description: "Support farmers as a trusted intermediary",
+      benefits: [
+        "Represent multiple farmers",
+        "Facilitate market connections",
+        "Provide agricultural guidance",
+        "Bridge technology gaps"
+      ],
+      color: "orange",
+      gradient: "from-orange-500 to-amber-600",
+      lightGradient: "from-orange-50 to-amber-50",
+      border: "border-orange-200",
+      shadow: "shadow-orange-100",
+      glow: "group-hover:shadow-orange-300/50",
+      text: "text-orange-600",
+    },
+    {
+      title: "AGRI-BUSINESS",
+      icon: Building2,
+      description: "Scale your agricultural business operations",
+      benefits: [
+        "Large-scale market access",
+        "B2B trading opportunities",
+        "Bulk sourcing capabilities",
+        "Enterprise-level solutions"
+      ],
+      color: "teal",
+      gradient: "from-teal-500 to-cyan-600",
+      lightGradient: "from-teal-50 to-cyan-50",
+      border: "border-teal-200",
+      shadow: "shadow-teal-100",
+      glow: "group-hover:shadow-teal-300/50",
+      text: "text-teal-600",
     },
   ];
 
@@ -390,6 +488,113 @@ export default function Home() {
               className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 text-lg shadow-lg transform hover:scale-105 transition-all duration-200"
             >
               Discover All Features{" "}
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Identity Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50"></div>
+
+        {/* Background Decorations */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-16 w-32 h-32 bg-gradient-to-br from-emerald-200/20 to-green-300/15 rounded-full blur-xl"></div>
+          <div className="absolute top-40 right-12 w-24 h-24 bg-gradient-to-br from-blue-200/25 to-indigo-300/20 rounded-full blur-xl"></div>
+          <div className="absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-br from-purple-200/15 to-violet-300/10 rounded-full blur-xl"></div>
+          <div className="absolute bottom-16 right-20 w-28 h-28 bg-gradient-to-br from-orange-200/20 to-amber-300/15 rounded-full blur-xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
+          <div className="text-center mb-16 animate-fade-in">
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
+                <HandHeart className="w-8 h-8 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+              Who do you <span className="gradient-text">identify</span> yourself as?
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Choose your role in the agricultural ecosystem and discover how Fromyfarm can transform your business.
+              <span className="block mt-2 text-primary font-medium">Click the cards for more information!</span>
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
+            {identityOptions.map((option, index) => {
+              const IconComponent = option.icon;
+
+              return (
+                <div
+                  key={option.title}
+                  className={`relative bg-white/95 backdrop-blur-sm border-2 ${option.border} rounded-2xl overflow-hidden group hover:bg-white transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 ${option.shadow} hover:shadow-2xl ${option.glow} animate-slide-in-up cursor-pointer`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Header */}
+                  <div className={`bg-gradient-to-br ${option.lightGradient} p-6 text-center`}>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-br ${option.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}
+                    >
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {option.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {option.description}
+                    </p>
+                  </div>
+
+                  {/* Benefits List */}
+                  <div className="p-6 space-y-3">
+                    {option.benefits.map((benefit, benefitIndex) => (
+                      <div
+                        key={benefitIndex}
+                        className="flex items-start space-x-3 group-hover:translate-x-1 transition-transform duration-300"
+                        style={{ transitionDelay: `${benefitIndex * 50}ms` }}
+                      >
+                        <div
+                          className={`w-6 h-6 bg-gradient-to-br ${option.gradient} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}
+                        >
+                          <CheckCircle className="w-3 h-3 text-white" />
+                        </div>
+                        <span className="text-sm text-gray-700 leading-relaxed">
+                          {benefit}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Hover Action Button */}
+                  <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-white/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                    <Button
+                      size="sm"
+                      className={`w-full bg-gradient-to-r ${option.gradient} hover:opacity-90 text-white`}
+                    >
+                      Get Started as {option.title}
+                    </Button>
+                  </div>
+
+                  {/* Bottom Accent */}
+                  <div
+                    className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${option.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
+                  ></div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-12">
+            <p className="text-lg text-muted-foreground mb-6">
+              Not sure which role fits you best?
+            </p>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 text-lg shadow-lg transform hover:scale-105 transition-all duration-200"
+            >
+              Download App & Explore All Options
             </Button>
           </div>
         </div>
