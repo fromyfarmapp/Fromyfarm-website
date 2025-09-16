@@ -1,57 +1,184 @@
-"use client"
+"use client";
 
-import DownloadButton from "@/components/DownloadButton"
-import { Button } from "@/components/ui/button"
-import { Play, User, ShoppingCart, Package, Users,Download,  BookOpen } from "lucide-react"
-import { useState } from "react"
+import DownloadButton from "@/components/DownloadButton";
+import { Button } from "@/components/ui/button";
+import {
+  Play,
+  User,
+  ShoppingCart,
+  Package,
+  Users,
+  Download,
+  BookOpen,
+} from "lucide-react";
+import { useState } from "react";
 
 export default function TutorialsPage() {
-  const [selectedUserType, setSelectedUserType] = useState("buyers")
+  const [selectedUserType, setSelectedUserType] = useState("buyers");
 
   const userTypes = [
-    { id: "buyers", label: "Buyers", icon: ShoppingCart, color: "from-blue-500 to-blue-600" },
-    { id: "farmers", label: "Farmers", icon: User, color: "from-green-500 to-green-600" },
-    { id: "suppliers", label: "Suppliers", icon: Package, color: "from-purple-500 to-purple-600" },
-    { id: "agents", label: "Farmer Agents", icon: Users, color: "from-orange-500 to-orange-600" }
-  ]
+    {
+      id: "buyers",
+      label: "Buyers",
+      icon: ShoppingCart,
+      color: "from-blue-500 to-blue-600",
+    },
+    {
+      id: "farmers",
+      label: "Farmers",
+      icon: User,
+      color: "from-green-500 to-green-600",
+    },
+    {
+      id: "suppliers",
+      label: "Suppliers",
+      icon: Package,
+      color: "from-purple-500 to-purple-600",
+    },
+    {
+      id: "agents",
+      label: "Farmer Agents",
+      icon: Users,
+      color: "from-orange-500 to-orange-600",
+    },
+  ];
 
   const tutorialData = {
     buyers: [
-      { title: "Registering as a Buyer", description: "Step-by-step guide to create your buyer account", duration: "3:45" },
-      { title: "Reading Farmer Maps", description: "Navigate and understand farmer location data", duration: "2:30" },
-      { title: "Using Produce Screens", description: "Browse and filter available agricultural produce", duration: "4:15" },
-      { title: "Making Bids", description: "Place competitive bids on farmer produce", duration: "3:20" },
-      { title: "Purchasing from Suppliers", description: "Direct purchasing workflow from suppliers", duration: "5:10" },
-      { title: "Creating Product Demands", description: "Set up demand requests for specific produce", duration: "4:30" },
-      { title: "Managing Bid Dashboard", description: "Monitor and manage all your active bids", duration: "3:55" }
+      {
+        title: "Registering as a Buyer",
+        description: "Step-by-step guide to create your buyer account",
+        link: "https://www.youtube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+      },
+      {
+        title: "Reading Farmer Maps",
+        description: "Navigate and understand farmer location data",
+        link: "https://www.youtube.com/embed/_brOqATrT_E?si=noaqiKoeDUsTZQF4",
+      },
+      {
+        title: "How to browse farm produce",
+        description: "Browse and filter available agricultural produce",
+        link: "https://www.youtube.com/embed/01WBf-803pg?si=PDWv3Du5y7gQF0SU",
+      },
+      {
+        title: "How to make a bid on farm produce ",
+        description: "Place competitive bids on farmer produce",
+        link: "https://www.youtube.com/embed/Pkzeg5U5XI8?si=smIpuhH1FywhGD9w",
+      },
+      {
+        title: "How to make a farm produce demand ",
+        description: "Direct purchasing workflow from suppliers",
+        link: "https://www.youtube.com/embed/V3KdSEWnLCE?si=o8hw2IwiwHK3_zfP",
+      },
+
     ],
     farmers: [
-      { title: "Registering as a Farmer", description: "Complete your farmer profile setup", duration: "4:20" },
-      { title: "Advertising Farm Produce", description: "List your produce with photos and details", duration: "5:30" },
-      { title: "Using Farmer Maps", description: "Set your location and visibility preferences", duration: "3:10" },
-      { title: "Updating Produce Listings", description: "Keep your produce information current", duration: "2:45" },
-      { title: "Managing Bid Dashboard", description: "Review and respond to buyer bids", duration: "4:00" },
-      { title: "Transaction Reports", description: "Track your sales and generate reports", duration: "3:35" },
-      { title: "Invoice Management", description: "Create and manage invoices for sales", duration: "4:15" }
+      {
+        title: "Registering as a Farmer",
+        description: "Complete your farmer profile setup",
+        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ",
+      },
+      {
+        title: "Advertising Farm Produce",
+        description: "List your produce with photos and details",
+        link: "https://www.youtbe.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ",
+      },
+      {
+        title: "Using Farmer Maps",
+        description: "Set your location and visibility preferences",
+        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZ2",
+      },
+      {
+        title: "Updating Produce Listings",
+        description: "Keep your produce information current",
+        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIJ2",
+      },
+      {
+        title: "Managing Bid Dashboard",
+        description: "Review and respond to buyer bids",
+        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZIZJ2",
+      },
+      {
+        title: "Transaction Reports",
+        description: "Track your sales and generate reports",
+        link: "https://www.yutube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+      },
+      {
+        title: "Invoice Management",
+        description: "Create and manage invoices for sales",
+        link: "https://www.youtub.com/embed/_brOqATrT_E?si=IF9WxG1zAsZIZJ2",
+      },
     ],
     suppliers: [
-      { title: "Registering as a Supplier", description: "Set up your supplier business profile", duration: "4:10" },
-      { title: "Advertising Products & Services", description: "Showcase your agricultural supplies", duration: "5:45" },
-      { title: "Reading Bid Dashboards", description: "Monitor incoming bid requests", duration: "3:25" },
-      { title: "Selling Supplies", description: "Complete the sales process", duration: "4:50" },
-      { title: "Reviewing Bids", description: "Evaluate and respond to buyer bids", duration: "3:40" },
-      { title: "Transaction Details", description: "Access detailed transaction history", duration: "3:15" },
-      { title: "Inventory Management", description: "Track and update your supply inventory", duration: "4:25" }
+      {
+        title: "Registering as a Supplier",
+        description: "Set up your supplier business profile",
+        link: "https://www.yotube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKZJ2",
+      },
+      {
+        title: "Advertising Products & Services",
+        description: "Showcase your agricultural supplies",
+        link: "https://www.youtbe.com/embed/_brOqATrT_E?si=IF9WxG1zAsZIZJ2",
+      },
+      {
+        title: "Reading Bid Dashboards",
+        description: "Monitor incoming bid requests",
+        link: "https://www.yotube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKZJ2",
+      },
+      {
+        title: "Selling Supplies",
+        description: "Complete the sales process",
+        link: "https://www.yotube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKZJ2",
+      },
+      {
+        title: "Reviewing Bids",
+        description: "Evaluate and respond to buyer bids",
+        link: "https://www.yotube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZIZJ2",
+      },
+      {
+        title: "Transaction Details",
+        description: "Access detailed transaction history",
+        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZ2",
+      },
+      {
+        title: "Inventory Management",
+        description: "Track and update your supply inventory",
+        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsKIZJ2",
+      },
     ],
     agents: [
-      { title: "Becoming a Farmer Agent", description: "Requirements and registration process", duration: "5:00" },
-      { title: "Registering New Farmers", description: "Help farmers join the platform", duration: "6:30" },
-      { title: "Adding Farmer Produce", description: "List produce on behalf of registered farmers", duration: "4:45" },
-      { title: "Managing Multiple Farmers", description: "Efficiently handle multiple farmer accounts", duration: "5:20" },
-      { title: "Commission Structure", description: "Understanding your earnings and payments", duration: "3:30" },
-      { title: "Training Resources", description: "Additional materials for farmer education", duration: "4:00" }
-    ]
-  }
+      {
+        title: "Becoming a Farmer Agent",
+        description: "Requirements and registration process",
+        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsKIZJ2",
+      },
+      {
+        title: "Registering New Farmers",
+        description: "Help farmers join the platform",
+        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+      },
+      {
+        title: "Adding Farmer Produce",
+        description: "List produce on behalf of registered farmers",
+        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+      },
+      {
+        title: "Managing Multiple Farmers",
+        description: "Efficiently handle multiple farmer accounts",
+        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+      },
+      {
+        title: "Commission Structure",
+        description: "Understanding your earnings and payments",
+        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+      },
+      {
+        title: "Training Resources",
+        description: "Additional materials for farmer education",
+        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+      },
+    ],
+  };
 
   return (
     <div className="relative overflow-hidden">
@@ -62,28 +189,32 @@ export default function TutorialsPage() {
             <span className="gradient-text">Video Tutorials</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Comprehensive guides to help you master every feature of the Fromyfarm platform. 
-            Choose your role and start learning today.
+            Comprehensive guides to help you master every feature of the
+            Fromyfarm platform. Choose your role and start learning today.
           </p>
         </div>
       </section>
 
       {/* User Type Selection */}
-       <section className="container mx-auto px-6">
+      <section className="container mx-auto px-6">
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {userTypes.map((type) => (
-        <Button
-          key={type.id}
-          variant={selectedUserType === type.id ? "default" : "glass"}
-          size="lg"
-          onClick={() => setSelectedUserType(type.id)}
-          className={`flex items-center space-x-2 px-6 py-3 transition-all duration-300
-            ${selectedUserType === type.id ? "bg-gradient-to-br from-green-500 to-green-600 text-white" : ""}
+            <Button
+              key={type.id}
+              variant={selectedUserType === type.id ? "default" : "glass"}
+              size="lg"
+              onClick={() => setSelectedUserType(type.id)}
+              className={`flex items-center space-x-2 px-6 py-3 transition-all duration-300
+            ${
+              selectedUserType === type.id
+                ? "bg-gradient-to-br from-green-500 to-green-600 text-white"
+                : ""
+            }
           `}
-        >
-          <type.icon className="w-5 h-5" />
-          <span>{type.label}</span>
-        </Button>
+            >
+              <type.icon className="w-5 h-5" />
+              <span>{type.label}</span>
+            </Button>
           ))}
         </div>
       </section>
@@ -93,44 +224,48 @@ export default function TutorialsPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl font-bold mb-4">
-              {userTypes.find(type => type.id === selectedUserType)?.label} Tutorials
+              {userTypes.find((type) => type.id === selectedUserType)?.label}{" "}
+              Tutorials
             </h2>
             <p className="text-lg text-muted-foreground">
-              Master all the features available to {userTypes.find(type => type.id === selectedUserType)?.label.toLowerCase()}
+              Master all the features available to{" "}
+              {userTypes
+                .find((type) => type.id === selectedUserType)
+                ?.label.toLowerCase()}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {tutorialData[selectedUserType as keyof typeof tutorialData].map((tutorial, index) => (
-              <div key={tutorial.title} className="glass-card group cursor-pointer animate-slide-in-left" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="relative mb-4">
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
-                      <Play className="w-8 h-8 text-white ml-1" />
+            {tutorialData[selectedUserType as keyof typeof tutorialData].map(
+              (tutorial, index) => (
+                <div
+                  key={tutorial.title}
+                  className="glass-card group cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="relative mb-4">
+                    <div className="aspect-video  rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                      <iframe
+                      className="w-full h-full rounded-lg"
+                        src={tutorial.link}
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      ></iframe>
                     </div>
                   </div>
-                  <div className="absolute top-2 right-2 bg-black/60 text-white px-2 py-1 rounded text-sm">
-                    {tutorial.duration}
-                  </div>
-                </div>
-                
-                <div className="space-y-3">
-                  <h3 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
-                    {tutorial.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {tutorial.description}
-                  </p>
-                </div>
 
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <Button variant="ghost" size="sm" className="w-full justify-center">
-                    <Play className="w-4 h-4 mr-2" />
-                    Watch Tutorial
-                  </Button>
+                  <div className="space-y-3">
+                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
+                      {tutorial.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {tutorial.description}
+                    </p>
+                  </div>
+
                 </div>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </div>
       </section>
@@ -138,7 +273,9 @@ export default function TutorialsPage() {
       {/* Additional Resources */}
       <section className="container mx-auto px-6 py-20">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Additional Resources</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Additional Resources
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Extra materials to help you get the most out of Fromyfarm
           </p>
@@ -158,7 +295,10 @@ export default function TutorialsPage() {
             </Button>
           </div>
 
-          <div className="glass-card text-center group animate-slide-in-left" style={{ animationDelay: "0.1s" }}>
+          <div
+            className="glass-card text-center group animate-slide-in-left"
+            style={{ animationDelay: "0.1s" }}
+          >
             <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <BookOpen className="w-8 h-8 text-green-600" />
             </div>
@@ -171,7 +311,10 @@ export default function TutorialsPage() {
             </Button>
           </div>
 
-          <div className="glass-card text-center group animate-slide-in-left" style={{ animationDelay: "0.2s" }}>
+          <div
+            className="glass-card text-center group animate-slide-in-left"
+            style={{ animationDelay: "0.2s" }}
+          >
             <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <Users className="w-8 h-8 text-white" />
             </div>
@@ -194,15 +337,15 @@ export default function TutorialsPage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Download Fromyfarm and start your journey to agricultural success. 
+              Download Fromyfarm and start your journey to agricultural success.
               Our tutorials will guide you every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row  justify-center items-center">
-              <DownloadButton/>
+              <DownloadButton />
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
