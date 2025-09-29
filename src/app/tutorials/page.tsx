@@ -45,11 +45,11 @@ export default function TutorialsPage() {
 
   const tutorialData = {
     buyers: [
-      {
-        title: "Registering as a Buyer",
-        description: "Step-by-step guide to create your buyer account",
-        link: "https://www.youtube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
-      },
+      // {
+      //   title: "Registering as a Buyer",
+      //   description: "Step-by-step guide to create your buyer account",
+      //   link: "https://www.youtube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+      // },
       {
         title: "Reading Farmer Maps",
         description: "Navigate and understand farmer location data",
@@ -70,114 +70,124 @@ export default function TutorialsPage() {
         description: "Direct purchasing workflow from suppliers",
         link: "https://www.youtube.com/embed/V3KdSEWnLCE?si=o8hw2IwiwHK3_zfP",
       },
+      {
+        title: "Make bid for supply items",
+        description: "Bid for non-equipment supplies",
+        link: "https://www.youtube.com/embed/yAadMOjxES4?si=fV8DTnajp0jFQdf5",
+      }
 
     ],
     farmers: [
       {
         title: "Registering as a Farmer",
         description: "Complete your farmer profile setup",
-        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ",
+        link: "https://www.youtube.com/embed/Eg_i1Q1eE4I?si=e3DObluIHqMLyTIP",
       },
       {
         title: "Advertising Farm Produce",
         description: "List your produce with photos and details",
-        link: "https://www.youtbe.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ",
+        link: "https://www.youtube.com/embed/YzfC2M2SVp4?si=IKd2XtXKhd_e3Cm6",
       },
       {
         title: "Using Farmer Maps",
         description: "Set your location and visibility preferences",
-        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZ2",
+        link: "https://www.youtube.com/embed/_brOqATrT_E?si=43hBIG9Pohfbpgbs",
       },
-      {
-        title: "Updating Produce Listings",
-        description: "Keep your produce information current",
-        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIJ2",
-      },
+      // {
+      //   title: "Updating Produce Listings",
+      //   description: "Keep your produce information current",
+      //   link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIJ2",
+      // },
       {
         title: "Managing Bid Dashboard",
         description: "Review and respond to buyer bids",
-        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZIZJ2",
+        link: "https://www.youtube.com/embed/xoIW7JNk7xo?si=i3PnuA9yTNbPq8xV",
       },
       {
-        title: "Transaction Reports",
-        description: "Track your sales and generate reports",
-        link: "https://www.yutube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+        title: "Notify Buyers",
+        description: "Notify a buyer on the produce you have",
+        link: "https://www.youtube.com/embed/73bbIQaieBw?si=4jeLaHWQ1mcEURKr",
       },
-      {
-        title: "Invoice Management",
-        description: "Create and manage invoices for sales",
-        link: "https://www.youtub.com/embed/_brOqATrT_E?si=IF9WxG1zAsZIZJ2",
+            {
+        title: "How to get Research and Information",
+        description: "See research and information on supply items ",
+        link: "https://www.youtube.com/embed/T7Zb1Ei0CL4?si=AxiHM5T7WEx14nEn",
       },
+      // {
+      //   title: "Invoice Management",
+      //   description: "Create and manage invoices for sales",
+      //   link: "https://www.youtub.com/embed/_brOqATrT_E?si=IF9WxG1zAsZIZJ2",
+      // },
     ],
     suppliers: [
       {
         title: "Registering as a Supplier",
         description: "Set up your supplier business profile",
-        link: "https://www.yotube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKZJ2",
+        link: "https://www.youtube.com/embed/QXRDwYIFtUA?si=ISjgHf2ZWogPUWQb",
       },
       {
         title: "Advertising Products & Services",
         description: "Showcase your agricultural supplies",
-        link: "https://www.youtbe.com/embed/_brOqATrT_E?si=IF9WxG1zAsZIZJ2",
+        link: "https://www.youtube.com/embed/f6YwcwgqArI?si=NUvErNaj5CYd8vPS",
       },
       {
-        title: "Reading Bid Dashboards",
-        description: "Monitor incoming bid requests",
-        link: "https://www.yotube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKZJ2",
+        title: "How to Bid for Supply Items",
+        description: "Bid for non-equipment supplies",
+        link: "https://www.youtube.com/embed/yAadMOjxES4?si=TRLA7x9Zzo4lQMHr",
       },
       {
-        title: "Selling Supplies",
-        description: "Complete the sales process",
-        link: "https://www.yotube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKZJ2",
+        title: "How to get Research and Information",
+        description: "See research and information on supply items ",
+        link: "https://www.youtube.com/embed/T7Zb1Ei0CL4?si=AxiHM5T7WEx14nEn",
       },
-      {
-        title: "Reviewing Bids",
-        description: "Evaluate and respond to buyer bids",
-        link: "https://www.yotube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZIZJ2",
-      },
-      {
-        title: "Transaction Details",
-        description: "Access detailed transaction history",
-        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZ2",
-      },
-      {
-        title: "Inventory Management",
-        description: "Track and update your supply inventory",
-        link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsKIZJ2",
-      },
+      // {
+      //   title: "Reviewing Bids",
+      //   description: "Evaluate and respond to buyer bids",
+      //   link: "https://www.yotube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZIZJ2",
+      // },
+      // {
+      //   title: "Transaction Details",
+      //   description: "Access detailed transaction history",
+      //   link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZ2",
+      // },
+      // {
+      //   title: "Inventory Management",
+      //   description: "Track and update your supply inventory",
+      //   link: "https://www.youube.com/embed/_brOqATrT_E?si=IF9WxG1zAsKIZJ2",
+      // },
     ],
-    agents: [
-      {
-        title: "Becoming a Farmer Agent",
-        description: "Requirements and registration process",
-        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsKIZJ2",
-      },
-      {
-        title: "Registering New Farmers",
-        description: "Help farmers join the platform",
-        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
-      },
-      {
-        title: "Adding Farmer Produce",
-        description: "List produce on behalf of registered farmers",
-        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
-      },
-      {
-        title: "Managing Multiple Farmers",
-        description: "Efficiently handle multiple farmer accounts",
-        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
-      },
-      {
-        title: "Commission Structure",
-        description: "Understanding your earnings and payments",
-        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
-      },
-      {
-        title: "Training Resources",
-        description: "Additional materials for farmer education",
-        link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
-      },
-    ],
+    // agents: [
+    //   {
+    //     title: "Becoming a Farmer Agent",
+    //     description: "Requirements and registration process",
+    //     link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsKIZJ2",
+    //   },
+    //   {
+    //     title: "Registering New Farmers",
+    //     description: "Help farmers join the platform",
+    //     link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+    //   },
+    //   {
+    //     title: "Adding Farmer Produce",
+    //     description: "List produce on behalf of registered farmers",
+    //     link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+    //   },
+    //   {
+    //     title: "Managing Multiple Farmers",
+    //     description: "Efficiently handle multiple farmer accounts",
+    //     link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+    //   },
+    //   {
+    //     title: "Commission Structure",
+    //     description: "Understanding your earnings and payments",
+    //     link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+    //   },
+    //   {
+    //     title: "Training Resources",
+    //     description: "Additional materials for farmer education",
+    //     link: "https://www.youtue.com/embed/_brOqATrT_E?si=IF9WxG1zAsZKIZJ2",
+    //   },
+    // ],
   };
 
   return (
