@@ -240,7 +240,7 @@ export default function ExhibitionsPage() {
 
       {/* Call to Action */}
       <section className="container mx-auto px-6 py-16">
-        <div className="glass-card text-center max-w-4xl mx-auto animate-fade-in">
+        <div className="glass-card text-center max-w-4xl mx-auto ">
           <div className="space-y-6">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
@@ -254,11 +254,11 @@ export default function ExhibitionsPage() {
               Download the Fromyfarm app and become part of Uganda's growing agricultural marketplace.
               Connect with farmers, buyers, and suppliers to transform agriculture together.
             </p>
-            <div className="flex  justify-center items-center">
-                     <DownloadButton/>
+            {/* <div className="flex  justify-center items-center"> */}
+                     <DownloadButton text="Download App"/>
 
            
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </section>
