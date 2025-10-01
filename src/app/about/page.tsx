@@ -168,16 +168,16 @@ export default function AboutPage() {
   return (
     <div className="relative overflow-hidden">
       {/* about Section */}
-      <section className="relative  overflow-hidden">
-        <div className="container mx-auto px- sm:px-6 lg:px-8  sm:py-20 lg:py-3 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            {/* Image Section */}
-            <div className="order-1 lg:order-1 relative  flex justify-center">
-              <div className="relative  p-2 sm:px-6  ml-5">
+      <section className="relative  overflow-hidden mt-10">
+        <div className="container mx-auto  sm:px-6 lg:px-4   sm:py-20 lg:py-3 relative z-10">
+          <div className="flex justify-around flex-wrap gap-4 lg:gap-4 items-center">
+            {/* Left Image Section */}
+            <div className="order-1 lg:order-1 relative flex justify-center">
+              <div className="relative p-4">
                 <img
-                  src="/images/phones/infor-section.png"
+                  src="/images/phones/map.png"
                   alt="Fromyfarm mobile app showing marketplace with maps and produce listings"
-                  className="w-4/5 h-auto object-contain rounded-lg"
+                  className="w-full max-w-[200px] h-auto object-contain rounded-lg"
                 />
               </div>
 
@@ -187,13 +187,13 @@ export default function AboutPage() {
             </div>
 
             {/* Content Section */}
-            <div className="order-2 lg:order-2 space-y-6 lg:space-y-8 text-center lg:text-left">
+            <div className="order-2 lg:order-2 lg:w-2/4 px-3 space-y-2 lg:space-y-4 text-justify animate-slide-in-bottom">
               <div className="space-y-4">
-                <h2 className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold leading-tight">
+                <h2 className="text-center text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold leading-tight">
                   <span className="gradient-text">Fromyfarm</span>
                 </h2>
 
-                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed px-3">
+                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
                   Welcome to Fromyfarm, your gateway to agricultural empowerment
                   and global market access. We are a revolutionary mobile
                   application committed to providing unparalleled benefits to
@@ -208,9 +208,24 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="pt-6">
-               <DownloadButton/>
+              <div className="pt-6 flex justify-center">
+               <DownloadButton text="Download App"/>
               </div>
+            </div>
+
+            {/* Right Image Section */}
+            <div className="order-3 lg:order-3 relative flex justify-center">
+              <div className="relative p-4">
+                <img
+                  src="/images/phones/produce.png"
+                  alt="Fromyfarm mobile app showing produce listings"
+                  className="w-full max-w-[170px] h-auto object-contain rounded-lg"
+                />
+              </div>
+
+              {/* Decorative Elements */}
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-emerald-400/20 to-teal-500/20 rounded-full blur-xl"></div>
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
