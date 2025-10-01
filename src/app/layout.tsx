@@ -17,6 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Fromyfarm - Digital Agricultural Marketplace",
   description: "Experience the Golden Tractor Moment. A digital agricultural marketplace connecting farmers, buyers, and suppliers globally.",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

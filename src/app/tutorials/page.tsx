@@ -281,7 +281,7 @@ export default function TutorialsPage() {
       </section>
 
       {/* Additional Resources */}
-      <section className="container mx-auto px-6 py-20">
+      {/* <section className="container mx-auto px-6 py-20">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Additional Resources
@@ -337,7 +337,7 @@ export default function TutorialsPage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="container mx-auto px-6 py-20">
@@ -351,7 +351,7 @@ export default function TutorialsPage() {
               Our tutorials will guide you every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row  justify-center items-center">
-              <DownloadButton />
+              <DownloadButton text="Download App"/>
             </div>
           </div>
         </div>
