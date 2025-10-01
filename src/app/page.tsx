@@ -16,13 +16,15 @@ import {
   Truck,
   HandHeart,
   Building2,
-} from "lucide-react";
+  Timer,
+  } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import DownloadButton from "@/components/DownloadButton";
 
 export default function Home() {
   const features = [
@@ -55,6 +57,12 @@ export default function Home() {
       description: "Competitive bidding system for the best prices on produce",
       color: "amber",
       highlight: "Real-Time",
+    },    {
+      icon: Timer,
+      title: " Real-Time Management",
+      description: "Monitor all downstream activities in your network",
+      color: "green",
+      highlight: "Real-Time",
     },
   ];
   const userTypes = [
@@ -77,7 +85,7 @@ export default function Home() {
         { label: "Per Farmer Contact Details", price: "$1.55" },
         { label: "Per Supplier Contact Details", price: "$1.55" },
       ],
-      note: "Bidding applies to non-equipment items only.",
+      note: "Bidding applies to non-equipment items and farm produce.",
     },
     {
       title: "For Suppliers",
@@ -85,8 +93,9 @@ export default function Home() {
         { label: "Annual Registration", price: "$3.09" },
         {
           label: "30 days Advertising per supplies type (e.g., Gumboots)",
-          price: "$1.55",
+          price: "Free",
         },
+            { label: "Per Buyer Contact Details", price: "$1.57" },
       ],
       note: "No quantity limits apply.",
     },
@@ -239,13 +248,13 @@ export default function Home() {
       text: "text-orange-600",
     },
     {
-      title: "AGRI-BUSINESS",
+      title: "AGRI-BUSINESS,Cooperatives & Farmer Groups,Institutions",
       icon: Building2,
-      description: "Scale your agricultural business operations",
+      description: "Comprehensive solutions for cooperatives, institutions, and agri-businesses",
       benefits: [
-        "Large-scale market access",
-        "B2B trading opportunities",
-        "Bulk sourcing capabilities",
+        "Financing & supply chain support",
+        "B2B, B2C & B2G trading",
+        "Data analytics for research",
         "Enterprise-level solutions"
       ],
       color: "teal",
@@ -426,7 +435,7 @@ export default function Home() {
           <div className="absolute bottom-10 right-10 w-28 h-28 bg-gradient-to-br from-amber-200/35 to-yellow-300/25 rounded-full blur-xl"></div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-15 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Why Choose <span className="gradient-text">Fromyfarm</span>?
@@ -438,7 +447,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
             {features.map((feature, index) => {
               const colors =
                 colorClasses[feature.color as keyof typeof colorClasses];
@@ -446,7 +455,7 @@ export default function Home() {
               return (
                 <div
                   key={feature.title}
-                  className={`relative bg-white/80 backdrop-blur-sm border-2 ${colors.border} rounded-2xl p-6 text-center group hover:bg-white transition-all duration-500 transform hover:-translate-y-2 ${colors.shadow} hover:shadow-xl ${colors.glow} animate-slide-in-left`}
+                  className={`relative bg-white/80 backdrop-blur-sm border-2 ${colors.border} rounded-2xl p-4 text-center group hover:bg-white transition-all duration-500 transform hover:-translate-y-2 ${colors.shadow} hover:shadow-xl ${colors.glow} animate-slide-in-left`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Icon */}
@@ -480,17 +489,7 @@ export default function Home() {
             })}
           </div>
 
-          {/* Bottom CTA */}
-
-          <div className="pt-10 flex justify-center ">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 text-lg shadow-lg transform hover:scale-105 transition-all duration-200"
-            >
-              Discover All Features{" "}
-            </Button>
-          </div>
-        </div>
+           </div>
       </section>
 
       {/* Identity Section */}
@@ -507,17 +506,12 @@ export default function Home() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
-                <HandHeart className="w-8 h-8 text-primary" />
-              </div>
-            </div>
+        
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Who do you <span className="gradient-text">identify</span> yourself as?
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Choose your role in the agricultural ecosystem and discover how Fromyfarm can transform your business.
-              <span className="block mt-2 text-primary font-medium">Click the cards for more information!</span>
             </p>
           </div>
 
@@ -566,15 +560,6 @@ export default function Home() {
                     ))}
                   </div>
 
-                  {/* Hover Action Button */}
-                  <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-white/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                    <Button
-                      size="sm"
-                      className={`w-full bg-gradient-to-r ${option.gradient} hover:opacity-90 text-white`}
-                    >
-                      Get Started as {option.title}
-                    </Button>
-                  </div>
 
                   {/* Bottom Accent */}
                   <div
@@ -587,15 +572,11 @@ export default function Home() {
 
           {/* Bottom CTA */}
           <div className="text-center mt-12">
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="text-lg text-muted-foreground ">
               Not sure which role fits you best?
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 text-lg shadow-lg transform hover:scale-105 transition-all duration-200"
-            >
-              Download App & Explore All Options
-            </Button>
+
+            <DownloadButton text="Download App and Explore"/>
           </div>
         </div>
       </section>
@@ -620,7 +601,7 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className={`relative bg-white/95 backdrop-blur-sm border-2 ${colors.border} rounded-3xl overflow-hidden group hover:bg-white transition-all duration-500 transform hover:-translate-y-3 hover:scale-100 ${colors.shadow} hover:shadow-2xl ${colors.glow} animate-slide-in-right`}
+                  className={`relative bg-white/50 backdrop-blur-sm border-2 ${colors.border} rounded-3xl overflow-hidden group hover:bg-white transition-all duration-500 transform hover:-translate-y-3 hover:scale-100 ${colors.shadow} hover:shadow-2xl ${colors.glow} animate-slide-in-right`}
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   {/* Header Section */}

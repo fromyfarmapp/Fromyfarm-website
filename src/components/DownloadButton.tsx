@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { X } from "lucide-react";
 
-const DownloadButton = () => {
+interface DownloadButtonProps {
+  text: string;
+}
+
+const DownloadButton: React.FC<DownloadButtonProps> = ({ text }) => {
   const [isDownloadPopupOpen, setIsDownloadPopupOpen] = useState(false);
 
   return (
@@ -15,12 +19,12 @@ const DownloadButton = () => {
           className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 text-lg shadow-lg transform hover:scale-105 transition-all duration-200"
           onClick={() => setIsDownloadPopupOpen(true)}
         >
-          Download App
+        {text}
         </Button>
       </div>
       {/* Download App Popup */}
       {isDownloadPopupOpen && (
-        <div className="fixed inset-0 bg-white/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-white/90 backdrop-blur-sm z-[100] flex items-center justify-center p-4 z-50">
           <div className="glass rounded-2xl p-6 max-w-md w-full relative">
             <button
               onClick={() => setIsDownloadPopupOpen(false)}
