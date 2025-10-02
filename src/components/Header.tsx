@@ -18,7 +18,7 @@ const Header = () => {
       subPages: [
         { name: "About Us", href: "/about" },
         { name: "Our Strategy", href: "/about/strategy" },
-        // { name: "Government", href: "/about/government" },
+        { name: "Government", href: "/government" },
       ]
     },
     { name: "Tutorials", href: "/tutorials" },
