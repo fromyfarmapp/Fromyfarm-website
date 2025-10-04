@@ -17,7 +17,7 @@ import {
   HandHeart,
   Building2,
   Timer,
-  } from "lucide-react";
+} from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -57,7 +57,8 @@ export default function Home() {
       description: "Competitive bidding system for the best prices on produce",
       color: "amber",
       highlight: "Real-Time",
-    },    {
+    },
+    {
       icon: Timer,
       title: " Real-Time Management",
       description: "Monitor all downstream activities in your network",
@@ -95,7 +96,7 @@ export default function Home() {
           label: "30 days Advertising per supplies type (e.g., Gumboots)",
           price: "Free",
         },
-            { label: "Per Buyer Contact Details", price: "$1.57" },
+        { label: "Per Buyer Contact Details", price: "$1.57" },
       ],
       note: "No quantity limits apply.",
     },
@@ -169,7 +170,15 @@ export default function Home() {
       alt: "fromyfarm phone 1",
     },
     {
-      src: "/images/phones/iphonefmf.png",
+      src: "/images/phones/iph2.png",
+      alt: "fromyfarm phone 2",
+    },
+    {
+      src: "/images/phones/ph2.png",
+      alt: "fromyfarm phone 2",
+    },
+    {
+      src: "/images/phones/ph4.png",
       alt: "fromyfarm phone 2",
     },
   ];
@@ -183,7 +192,7 @@ export default function Home() {
         "Trade produce in an open market",
         "Receive competitive bids from buyers",
         "Decide which buyer's bid to accept",
-        "Access to wider market opportunities"
+        "Access to wider market opportunities",
       ],
       color: "emerald",
       gradient: "from-emerald-500 to-green-600",
@@ -201,7 +210,7 @@ export default function Home() {
         "Bid on farmer's produce",
         "Pay for farmer contact details",
         "Annual registration fee of $3.09",
-        "Direct access to agricultural suppliers"
+        "Direct access to agricultural suppliers",
       ],
       color: "blue",
       gradient: "from-blue-500 to-indigo-600",
@@ -219,7 +228,7 @@ export default function Home() {
         "Advertise supplies (e.g., gumboots)",
         "30-day advertising per supply type",
         "Annual registration fee of $3.09",
-        "Connect with farmers and agri-businesses"
+        "Connect with farmers and agri-businesses",
       ],
       color: "purple",
       gradient: "from-purple-500 to-violet-600",
@@ -237,7 +246,7 @@ export default function Home() {
         "Represent multiple farmers",
         "Facilitate market connections",
         "Provide agricultural guidance",
-        "Bridge technology gaps"
+        "Bridge technology gaps",
       ],
       color: "orange",
       gradient: "from-orange-500 to-amber-600",
@@ -250,12 +259,13 @@ export default function Home() {
     {
       title: "AGRI-BUSINESS,Cooperatives & Farmer Groups,Institutions",
       icon: Building2,
-      description: "Comprehensive solutions for cooperatives, institutions, and agri-businesses",
+      description:
+        "Comprehensive solutions for cooperatives, institutions, and agri-businesses",
       benefits: [
         "Financing & supply chain support",
         "B2B, B2C & B2G trading",
         "Data analytics for research",
-        "Enterprise-level solutions"
+        "Enterprise-level solutions",
       ],
       color: "teal",
       gradient: "from-teal-500 to-cyan-600",
@@ -343,9 +353,14 @@ export default function Home() {
               <div className="relative">
                 <Carousel
                   className="w-full max-w-md lg:max-w-lg"
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
                   plugins={[
                     Autoplay({
-                      delay: 3000,
+                      delay: 2000,
+                      stopOnInteraction: false,
                     }),
                   ]}
                 >
@@ -413,12 +428,7 @@ export default function Home() {
               </div>
 
               <div className="pt-6">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 text-lg shadow-lg transform hover:scale-105 transition-all duration-200"
-                >
-                  Start Now
-                </Button>
+                <DownloadButton text="Download App Now" />
               </div>
             </div>
           </div>
@@ -488,8 +498,7 @@ export default function Home() {
               );
             })}
           </div>
-
-           </div>
+        </div>
       </section>
 
       {/* Identity Section */}
@@ -506,12 +515,13 @@ export default function Home() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
-        
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Who do you <span className="gradient-text">identify</span> yourself as?
+              Who do you <span className="gradient-text">identify</span>{" "}
+              yourself as?
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Choose your role in the agricultural ecosystem and discover how Fromyfarm can transform your business.
+              Choose your role in the agricultural ecosystem and discover how
+              Fromyfarm can transform your business.
             </p>
           </div>
 
@@ -526,7 +536,9 @@ export default function Home() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Header */}
-                  <div className={`bg-gradient-to-br ${option.lightGradient} p-6 text-center`}>
+                  <div
+                    className={`bg-gradient-to-br ${option.lightGradient} p-6 text-center`}
+                  >
                     <div
                       className={`w-16 h-16 bg-gradient-to-br ${option.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}
                     >
@@ -560,7 +572,6 @@ export default function Home() {
                     ))}
                   </div>
 
-
                   {/* Bottom Accent */}
                   <div
                     className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${option.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
@@ -576,7 +587,7 @@ export default function Home() {
               Not sure which role fits you best?
             </p>
 
-            <DownloadButton text="Download App and Explore"/>
+            <DownloadButton text="Download App and Explore" />
           </div>
         </div>
       </section>
