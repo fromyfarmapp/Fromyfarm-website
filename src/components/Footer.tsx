@@ -186,7 +186,7 @@ const Footer = () => {
               <p>© {new Date().getFullYear()} Fromyfarm. All rights reserved.</p>
               <p className="mt-2">
                 <Link
-                  href="/terms"
+                  href="/terms-of-use"
                   className="text-blue-400 hover:text-blue-500 underline"
                 >
                   Terms of Use & Privacy Policy
