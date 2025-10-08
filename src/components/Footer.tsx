@@ -183,7 +183,15 @@ const Footer = () => {
           {/* Copyright */}
           <div className="border-t border-white/10  flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 Fromyfarm. All rights reserved.
+              <p>© {new Date().getFullYear()} Fromyfarm. All rights reserved.</p>
+              <p className="mt-2">
+                <Link
+                  href="/terms"
+                  className="text-blue-400 hover:text-blue-500 underline"
+                >
+                  Terms of Use & Privacy Policy
+                </Link>
+              </p>
             </div>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <span>Experience the</span>
@@ -193,6 +201,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+     
     </footer>
   )
 }
