@@ -21,10 +21,12 @@ import { Button } from "@/components/ui/button";
 export default function ConferencePage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [selectedDistrict, setSelectedDistrict] = useState<string>("All");
 
   const conferences = [
     {
       location: "Arua, Uganda",
+      district: "Arua",
       date: "2024",
       description:
         "Fromyfarm App presentation at multiple conferences to increase agricultural production. We previously presented to CIP (International Potato Centre) and are seeking greater awareness among agricultural stakeholders.",
@@ -38,6 +40,7 @@ export default function ConferencePage() {
     },
     {
       location: "Kiryandongo, Uganda",
+      district: "Kiryandongo",
       date: "2024",
       description:
         "Engaging with local farmers and agricultural stakeholders to promote the Fromyfarm platform. Focus on building connections between farmers, buyers, and suppliers in the agricultural ecosystem.",
@@ -51,6 +54,7 @@ export default function ConferencePage() {
     },
     {
       location: "Lira, Uganda",
+      district: "Lira",
       date: "2024",
       description:
         "Demonstrating how Fromyfarm connects farmers, buyers, and suppliers in the agricultural ecosystem. Presented by David Ojok with sponsorship from Mount Meru Group and Palladium Group.",
@@ -64,6 +68,7 @@ export default function ConferencePage() {
     },
     {
       location: "Gulu, Uganda",
+      district: "Gulu",
       date: "2024",
       description:
         "Building partnerships with local agricultural organizations and promoting digital farming solutions. Focus on increasing agricultural production through technology adoption.",
@@ -77,6 +82,7 @@ export default function ConferencePage() {
     },
     {
       location: "Soroti, Uganda (SOCADIDO)",
+      district: "Soroti",
       date: "2024",
       description:
         "SOCADIDO visit - Collaborating with local development organizations to enhance app impact and reach more farming communities across Uganda.",
@@ -138,7 +144,7 @@ export default function ConferencePage() {
       description:
         "Collaborative efforts with SOCADIDO to enhance agricultural technology adoption",
       thumbnail: "/images/conferences/socadido1.jpg",
-      videoUrl: "/images/conferences/socadido1.mp4", 
+      videoUrl: "/images/conferences/socadido1.mp4",
     },
     {
       title: "SOCADIDO Partnership Overview",
@@ -148,6 +154,14 @@ export default function ConferencePage() {
       videoUrl: "/images/conferences/socadido2.mp4",
     },
   ];
+
+  // Extract unique districts from conferences
+  const districts = ["All", ...Array.from(new Set(conferences.map(conf => conf.district)))];
+
+  // Filter conferences based on selected district
+  const filteredConferences = selectedDistrict === "All"
+    ? conferences
+    : conferences.filter(conf => conf.district === selectedDistrict);
 
   // Conference images mapped to actual photos
   const getConferenceImages = (location: string, index: number) => {
@@ -209,8 +223,8 @@ export default function ConferencePage() {
     }
   };
 
-  // Get all conference images for modal navigation
-  const allConferenceImages = conferences.flatMap((conf, idx) =>
+  // Get all conference images for modal navigation (based on filtered conferences)
+  const allConferenceImages = filteredConferences.flatMap((conf, idx) =>
     getConferenceImages(conf.location, idx).map((img) => ({
       ...img,
       location: conf.location,
@@ -265,12 +279,41 @@ export default function ConferencePage() {
         <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-full blur-xl"></div>
       </section>
 
+      {/* District Filter Section */}
+      <section className="container mx-auto px-6 pb-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col items-center gap-4">
+            <h2 className="text-2xl font-bold text-center">Filter by District</h2>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {districts.map((district) => (
+                <button
+                  key={district}
+                  onClick={() => setSelectedDistrict(district)}
+                  className={`px-6 py-2.5 rounded-full font-medium transition-all duration-200 ${
+                    selectedDistrict === district
+                      ? "bg-gradient-to-r from-emerald-500 to-teal-400 text-white shadow-lg scale-105"
+                      : "bg-card border border-border hover:border-primary/50 text-foreground hover:scale-105"
+                  }`}
+                >
+                  {district}
+                </button>
+              ))}
+            </div>
+            {selectedDistrict !== "All" && (
+              <p className="text-sm text-muted-foreground">
+                Showing {filteredConferences.length} conference{filteredConferences.length !== 1 ? 's' : ''} in {selectedDistrict}
+              </p>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Individual Conferences */}
       <section className="container mx-auto px-6 py-12">
 
 
         <div className="grid gap-8 lg:gap-12">
-          {conferences.map((conference, index) => {
+          {filteredConferences.map((conference, index) => {
             const Icon = conference.icon;
             const isEven = index % 2 === 0;
 
