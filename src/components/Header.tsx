@@ -48,46 +48,54 @@ const Header = () => {
           <span className="text-xl font-bold gradient-text">Fromyfarm</span>
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation (click to open dropdown) */}
         <div className="hidden md:flex items-center space-x-8">
-          {navigation.map((item) => (
-            <div 
-              key={item.name}
-              className="relative group"
-              onMouseEnter={() => setHoveredItem(item.name)}
-              onMouseLeave={() => setHoveredItem(null)}
-            >
+            {navigation.map((item) => (
+            <div key={item.name} className="relative">
               <div className="flex items-center space-x-1">
-                <Link
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium relative"
-                >
-                  {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-                {item.subPages && (
-                  <ChevronDown className="h-4 w-4 text-foreground group-hover:text-primary transition-colors duration-400" />
-                )}
+            {item.subPages ? (
+            <button
+              type="button"
+              aria-expanded={hoveredItem === item.name}
+              onClick={(e) => {
+              e.stopPropagation()
+              setHoveredItem(hoveredItem === item.name ? null : item.name)
+              }}
+              className="text-foreground hover:text-primary transition-colors duration-200 font-medium relative flex items-center space-x-1 group"
+            >
+              <span className="relative z-10">{item.name}</span>
+              <span className="absolute left-0 right-0 -bottom-1 h-[2px] bg-primary transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
+            </button>
+            ) : (
+            <Link
+              href={item.href}
+              className="text-foreground hover:text-primary transition-colors duration-200 font-medium relative group"
+              onClick={() => setHoveredItem(null)}
+            >
+              <span className="relative z-10">{item.name}</span>
+              <span className="absolute left-0 right-0 -bottom-1 h-[2px] bg-primary transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
+            </Link>
+            )}
+
+          {item.subPages && (
+            <ChevronDown className="h-4 w-4 text-foreground transition-colors duration-400" />
+          )}
               </div>
-              
-              {/* Dropdown Menu */}
+
               {item.subPages && hoveredItem === item.name && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50"
-                  onMouseEnter={() => setHoveredItem(item.name)}
-                  onMouseLeave={() => setHoveredItem(null)}
-                >
-                  {item.subPages.map((subItem) => (
-                    <Link
-                      key={subItem.name}
-                      href={subItem.href}
-                      className="block px-4 py-2 text-sm text-foreground hover:text-primary transition-colors duration-200 relative group/sub"
-                    >
-                      {subItem.name}
-                      <span className="absolute -bottom-0.5 left-4 right-4 h-0.5 bg-primary scale-x-0 transition-transform duration-200 group-hover/sub:scale-x-100"></span>
-                    </Link>
-                  ))}
-                </div>
+            <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
+            {item.subPages.map((subItem) => (
+              <Link
+              key={subItem.name}
+              href={subItem.href}
+              className="group relative block px-4 py-2 text-sm text-foreground hover:text-primary transition-colors duration-200"
+              onClick={() => setHoveredItem(null)}
+              >
+              <span className="relative z-10">{subItem.name}</span>
+              <span className="absolute left-4 right-4 -bottom-1 h-0.5 bg-primary transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-25" />
+              </Link>
+            ))}
+            </div>
               )}
             </div>
           ))}
