@@ -111,22 +111,22 @@ export default function AboutPage() {
     {
       name: "Jeroma Farmers",
       image: "/images/partners/jerom.jpeg",
-      website: "https://jeromaformers.com",
+      website: "#",
     },
     {
       name: "Green Culture Africa",
       image: "/images/partners/greenculture.jpeg",
-      website: "https://greencultureafrica.com",
+      website: "#",
     },
     {
       name: "DIGIA",
       image: "/images/partners/digia.jpeg",
-      website: "https://ugandaagricoop.org",
+      website: "https://digiabusiness.com/",
     },
     {
       name: "Mcash",
       image: "/images/partners/mcash.jpeg",
-      website: "https://eastafricafarming.net",
+      website: "https://www.mcash.ug/",
     },
   ];
 
