@@ -304,11 +304,9 @@ export default function WebservicesPage() {
 
                 {/* Enhanced placeholder */}
                 <div className="mb-8 rounded-xl  border-2 shadow-lg" >
-                  {/* <div className="aspect-video flex items-center justify-center bg-gradient-to-br from-gray-50 to-white"> */}
-                    {/* <div className="text-center p-8"> */}
+           
                       <img src="/images/webservices/partner.png" alt="dashboard image"   />
-                     {/* </div> */}
-                  {/* </div> */}
+
                 </div>
 
 
