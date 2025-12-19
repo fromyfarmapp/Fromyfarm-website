@@ -19,9 +19,14 @@ const Header = () => {
         { name: "About Us", href: "/about" },
         { name: "Our Strategy", href: "/about/strategy" },
         { name: "Government", href: "/government" },
-         { name: "Web Services", href: "/about/webservices" },
       ]
     },
+     { name: "Services", href: "/services",
+      subPages: [
+        { name: "Fromyfarm App", href: "/services/fromyfarm-app" },
+        { name: "Web Services", href: "/services/webservices" },
+      ]
+      },
     { name: "Tutorials", href: "/tutorials" },
     { 
       name: "Marketplace", 
