@@ -35,12 +35,12 @@ export default function TutorialsPage() {
       icon: Package,
       color: "from-purple-500 to-purple-600",
     },
-    {
-      id: "agents",
-      label: "Farmer Agents",
-      icon: Users,
-      color: "from-orange-500 to-orange-600",
-    },
+    // {
+    //   id: "agents",
+    //   label: "Farmer Agents",
+    //   icon: Users,
+    //   color: "from-orange-500 to-orange-600",
+    // },
   ];
 
   const tutorialData = {
