@@ -12,7 +12,6 @@ import {
 import DownloadButton from "@/components/DownloadButton";
 
 export default function AboutPage() {
-  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
   const team = [
     {
       name: "Stephen Odonga",
@@ -224,34 +223,6 @@ export default function AboutPage() {
         </div>
       </section>
       
-      <section className="container mx-auto px-6 py-10 flex justify-center ">
-        <img
-          src="/images/Dsitribution.jpg"
-          alt="A chart showing the fromyfarm distribution network"
-          className="w-3/6 h-auto object-cover rounded-lg shadow-lg cursor-pointer"
-          onClick={() => setIsPreviewOpen(true)}
-        />
-        {/* Image Preview Modal */}
-        {typeof window !== "undefined" && isPreviewOpen && (
-          <div className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4">
-        <div className="relative bg-white rounded-lg shadow-lg p-4 max-w-3xl w-full flex flex-col items-center">
-          <button
-            onClick={() => setIsPreviewOpen(false)}
-            className="absolute top-4 right-4 text-foreground/60 hover:text-foreground transition-colors duration-200"
-          >
-            <X className="h-6 w-6" />
-          </button>
-          <img
-            src="/images/Dsitribution.jpg"
-            alt="Distribution Network Preview"
-            className="w-full h-auto object-contain rounded-lg"
-          />
-        </div>
-          </div>
-        )}
-      </section>
-
-
 
       {/* Team Section */}
       <section className="container mx-auto px-6 py-20">
