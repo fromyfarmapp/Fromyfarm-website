@@ -170,8 +170,8 @@ const Footer = () => {
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4" />
                 <div className="flex flex-row space-y-3">
-                <span>+256 743 101 292</span>
-                <span>+256 772 123 456</span>
+                <span>+256 743 101 292</span> / 
+                <span>+256 765 537 741</span>
                 </div>
 
               </div>
